@@ -1,0 +1,162 @@
+﻿<Window x:Class="SpaceLearn_demo.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpaceLearn_demo"
+        mc:Ignorable="d"
+        Title="Register" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/image10.jpg"/>
+        </Grid.Background>
+
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Margin="0">
+
+            <Border CornerRadius="100" BorderThickness="0">
+                <Grid Background="#FF0E0E0E" Width="auto" Opacity="0.8">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+
+                        </Grid.RowDefinitions>
+                        <Image Source="\Images\space_learn_logo.png" Height="80" Width="80" Grid.Row="0" Grid.Column="0"/>
+                        <TextBlock FontWeight="Bold" FontSize="30px" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Foreground="White">SpaceLearn</TextBlock>
+
+                        <Grid Grid.Row="3" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Foreground="White" Grid.Row="0" HorizontalAlignment="Center">
+                    Enter your username:
+                            </TextBlock>
+                            <TextBox Style="{DynamicResource usernameR}"  
+                       Background="Transparent"
+                         Foreground="White"
+                         Name="username"
+                         FontSize="13"
+                         Height="28"
+                         VerticalContentAlignment="Center"
+                         Margin="10"
+                         Padding="20,0,0,0"
+                         Grid.Row="1"
+                                 Width="200"
+                                BorderThickness="1">
+
+                            </TextBox>
+                            <TextBlock Foreground="White" Grid.Row="2" HorizontalAlignment="Center">
+                    Enter your password:
+                            </TextBlock>
+                            <PasswordBox Style="{DynamicResource passwordR1}"   
+                         Background="Transparent"
+                         Foreground="White"
+                         Name="password"
+                         FontSize="13"
+                         Height="28"
+                         VerticalContentAlignment="Center"
+                         Margin="10"
+                         Padding="20,0,0,0"
+                         Grid.Row="3"
+                                 Width="200"
+                                  BorderThickness="1">
+
+                            </PasswordBox>
+
+                            <TextBlock Foreground="White" Grid.Row="4" HorizontalAlignment="Center">
+                    Enter your password again:
+                            </TextBlock>
+                            <PasswordBox Style="{DynamicResource passwordR1}"   
+                         Foreground="White"
+                         Background="Transparent"
+                         Name="password1"
+                         FontSize="13"
+                         Height="28"
+                         VerticalContentAlignment="Center"
+                         Margin="10,8,10,12"
+                         Padding="20,0,0,0"
+                         Grid.Row="5"
+                                 Width="200"
+                                  BorderThickness="1">
+
+                            </PasswordBox>
+
+
+                            <Button Style="{DynamicResource ButtonStyle2}" Grid.Row="6"  Background="Transparent" BorderThickness="0" Click="Button_Click2">
+                                <TextBlock x:Name="text2" Foreground="White"  HorizontalAlignment="Center" TextDecorations="Underline" Margin="3">Already have an account</TextBlock>
+                            </Button>
+                            <Button Style="{DynamicResource ButtonStyle1}" Grid.Row="7" Background="Transparent" BorderThickness="0" Click="Button_Click">
+                                <TextBlock x:Name="text1" Foreground="White" HorizontalAlignment="Center" TextDecorations="Underline" Margin="3">Skip for now</TextBlock>
+                            </Button>
+                            <Button Style="{DynamicResource submit}" Click="Button_Click" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10" Padding="30,10" BorderThickness="1" Foreground="White" Grid.Row="8"  >Submit
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+                            <Button Style="{DynamicResource submit}" Click="Button_Click" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10" Padding="30,10" BorderThickness="1" Foreground="White" Grid.Row="8"  >Submit
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+                            <Button Style="{DynamicResource submit}" Click="Register_Submit" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10" Padding="30,10" BorderThickness="1" Foreground="White" Grid.Row="8"  >Submit
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+                        </Grid>
+
+
+                    </Grid>
+
+
+
+                </Grid>
+            </Border>
+
+
+        </Grid>
+
+    </Grid>
+
+</Window>
